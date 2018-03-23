@@ -1,7 +1,7 @@
 # Insert and shift middle index of array
 Data structures and algorithms challenges
 
-## Challenge
+## Challenges
+1. shift-array
+2. binary-search
 
-## Solution
-[Image](assets/shift-array.jpg)
