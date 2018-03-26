@@ -5,13 +5,13 @@ class LinkedList:
     """class called LinkedList """
     def __init__(self, iter=[]):
         self.head = None
-        self._size = 0
+        self._len = 0
 
         try:
             for item in reversed(iter):
                 self.insert(item)
         except TypeError:
-            print('Cannot be iterated.')
+            print('It\'s not a iterable type.')
 
     def __str__(self):
         """return all item values in singly linked list"""
@@ -22,16 +22,10 @@ class LinkedList:
             current = current._next
         return lis
 
-    def insert(self, new_node):
-        if self.head is None:
-            self.head = new_node
-        else:
-            last_node = self.head
-            while True:
-                if last_node._next is None:
-                    break
-                last_node = last_node._next
-            last_node._next = new_node
+    def insert(self, val):
+        """insert item to singly linked list"""
+        self.head = Node(val, self.head)
+        self._len += 1
 
 
 # instantiate first node with data "john"
