@@ -12,8 +12,15 @@ class LinkedList:
                 self.insert(item)
         except TypeError:
             print('Cannot be iterated.')
-    
+
     def __str__(self):
+        """return all item values in singly linked list"""
+        lis = []
+        current = self.head
+        for _ in range(self._len+1):
+            lis.append(current.val)
+            current = current._next
+        return lis
 
     def insert(self, new_node):
         if self.head is None:
