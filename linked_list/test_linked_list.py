@@ -15,7 +15,7 @@ def small_ll():
 
 @pytest.fixture
 def test_node():
-    return Node(3, 4, 5)
+    return Node(3, 4)
 
 
 def test_insert_first_node(empty_ll):
@@ -36,4 +36,10 @@ def test_str(small_ll):
 
 
 def test_empty_str(empty_ll):
+    """test for str representation for empty linked list"""
     assert str(empty_ll) == 'List is empty'
+
+
+def test_str_node(test_node):
+    """test for str representation of node"""
+    assert str(test_node) == '3'
