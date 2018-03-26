@@ -33,7 +33,7 @@ class LinkedList:
         """
         current = self.head
         while current is not None:
-            if current.val = val:
+            if current.val == val:
                 return True
             else:
                 current = current._next
