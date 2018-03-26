@@ -16,11 +16,18 @@ class LinkedList:
     def __str__(self):
         """return all item values in singly linked list"""
         lis = []
+        if self.head is None:
+            return 'List is empty'
         current = self.head
-        for _ in range(self._len+1):
+        while True:
+            if current is None:
+                break
             lis.append(current.val)
             current = current._next
-        return lis
+        return '{}'.format(lis)
+
+    def __len__(self):
+        return self._len
 
     def insert(self, val):
         """insert item to singly linked list"""
