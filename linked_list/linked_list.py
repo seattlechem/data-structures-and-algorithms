@@ -27,16 +27,14 @@ class LinkedList:
         self.head = Node(val, self.head)
         self._len += 1
 
-
-# instantiate first node with data "john"
-first_node = Node("john")
-# instantiate linkedlist
-linkedlist = LinkedList()
-# add first_node into linkedlist using insert method
-linkedlist.insert(first_node)
-# instantiate second_node and insert
-second_node = Node('Ben')
-linkedlist.insert(second_node)
-# instantiate third_node and insert
-third_node = Node('Matthew')
-linkedlist.insert(third_node)
+    def find(self, val):
+        """search if val is found in the singly linked list
+            and return True or False
+        """
+        current = self.head
+        while current is not None:
+            if current.val = val:
+                return True
+            else:
+                current = current._next
+        return False
