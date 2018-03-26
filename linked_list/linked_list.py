@@ -3,8 +3,17 @@ from node import Node
 
 class LinkedList:
     """class called LinkedList """
-    def __init__(self):
+    def __init__(self, iter=[]):
         self.head = None
+        self._size = 0
+
+        try:
+            for item in reversed(iter):
+                self.insert(item)
+        except TypeError:
+            print('Cannot be iterated.')
+    
+    def __str__(self):
 
     def insert(self, new_node):
         if self.head is None:
