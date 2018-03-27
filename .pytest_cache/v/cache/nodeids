@@ -1,3 +1,4 @@
 [
-  "challenges/largest_product/shift-array/test_shift_array.py::test_insert_shift_array"
+  "challenges/largest_product/shift-array/test_shift_array.py::test_insert_shift_array",
+  "challenges/largest_product/shift-array/test_shift_array.py::test_type_error"
 ]
