@@ -1,3 +1,6 @@
+import pytest
+
+
 from largest_product import largest_product
 
 
@@ -10,4 +13,5 @@ def test_largest_product_empty():
 
 
 def test_largest_product_true():
-    assert largest_product(True) is None
+    with pytest.raises(TypeError):
+        largest_product([['a', 'b'], ['c', 'd']])
