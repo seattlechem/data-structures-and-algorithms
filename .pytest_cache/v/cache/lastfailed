@@ -1,3 +1,5 @@
 {
+  "challenges/largest_product/shift-array/test_shift_array.py::test_insert_shift_array_fail": true,
+  "challenges/largest_product/shift-array/test_shift_array.py::test_insert_shift_array_single_element_list": true,
   "challenges/largest_product/test_largest_product.py::test_largest_product_true": true
 }
