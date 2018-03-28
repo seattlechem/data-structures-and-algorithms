@@ -66,3 +66,13 @@ class LinkedList:
             current = current._next
         current._next = Node(new_val, current._next)
 
+    def insert_after(self, val, new_val):
+        """
+        .insertAfter(value, newVal) which add a new node with the given
+        newValue immediately after the first value node
+        """
+        current = self.head
+        while current._next.val == val:
+            current = current._next
+            current._next = Node(new_val, current._next)
+            return

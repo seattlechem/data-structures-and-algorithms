@@ -38,3 +38,8 @@ def test_append(small_ll):
 def test_insert_before(small_ll):
     small_ll.insert_before(2, 10)
     assert str(small_ll) == '[1, 10, 2, 3, 4]'
+
+
+def test_insert_after(small_ll):
+    small_ll.insert_after(2, 10)
+    assert str(small_ll) == '[1, 2, 10, 3, 4]'
