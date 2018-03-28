@@ -11,7 +11,7 @@ class LinkedList:
             for item in reversed(iter):
                 self.insert(item)
         except TypeError:
-            print('It\'s not a iterable type.')
+            raise TypeError('It\'s not a iterable type.')
 
     def __str__(self):
         """return all item values in singly linked list"""
@@ -30,7 +30,7 @@ class LinkedList:
         return self._len
 
     def insert(self, val):
-        """insert item to singly linked list"""
+        """insert item into the beginning of singly linked list"""
         self.head = Node(val, self.head)
         self._len += 1
 
@@ -45,3 +45,33 @@ class LinkedList:
             else:
                 current = current._next
         return False
+
+    def append(self, val):
+        """
+            Insert a value at the end of list
+        """
+        if self.head is None:
+            self.head = Node(val)
+            return
+        current = self.head
+        while current._next is not None:
+            current = current._next
+        current._next = Node(val)
+
+    def insert_before(self, val, new_val):
+        """ add a new node with the given new_value immediately before the
+        first value node """
+        current = self.head
+        while current._next.val != val:
+            current = current._next
+        current._next = Node(new_val, current._next)
+
+    def insert_after(self, val, new_val):
+        """
+        .insertAfter(value, newVal) which add a new node with the given
+        newValue immediately after the first value node
+        """
+        current = self.head
+        while current.val != val:
+            current = current._next
+        current._next = Node(new_val, current._next)
