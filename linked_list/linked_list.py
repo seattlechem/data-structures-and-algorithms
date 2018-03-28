@@ -75,3 +75,20 @@ class LinkedList:
         while current.val != val:
             current = current._next
         current._next = Node(new_val, current._next)
+
+    def kth_from_end(self, k):
+        """ takes a number, k, as an argument. Return the node
+        that is k from the end of the linked list."""
+        length = len(self)
+        if k >= length:
+            raise AttributeError('It goes over the range.')
+        elif type(k) != int:
+            raise NameError('Use only number.')
+        else:
+            counter = 0
+            current = self.head
+            while counter != length - (k + 1):
+                print(counter)
+                current = current._next
+                counter += 1
+            return current

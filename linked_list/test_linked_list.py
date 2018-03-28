@@ -52,3 +52,13 @@ def test_insert_after(small_ll):
 def test_type_error_with_linked_list():
     with pytest.raises(TypeError):
         ll(10)
+
+
+def test_kth_from_end_Attribute_Error(small_ll):
+    with pytest.raises(AttributeError):
+        assert small_ll.kth_from_end(6).val == 3
+
+
+def test_kth_from_end_Name_Error(small_ll):
+    with pytest.raises(AttributeError):
+        assert small_ll.kth_from_end('a').val == 3
