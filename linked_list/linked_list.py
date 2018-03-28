@@ -80,15 +80,15 @@ class LinkedList:
         """ takes a number, k, as an argument. Return the node
         that is k from the end of the linked list."""
         length = len(self)
+        if type(k) != int:
+            raise TypeError('Use only number.')
         if k >= length:
-            raise AttributeError('It goes over the range.')
-        elif type(k) != int:
-            raise NameError('Use only number.')
-        else:
-            counter = 0
-            current = self.head
-            while counter != length - (k + 1):
-                print(counter)
-                current = current._next
-                counter += 1
-            return current
+            raise ValueError('It goes over the range.')
+        
+        counter = 0
+        current = self.head
+        while counter != length - (k + 1):
+            print(counter)
+            current = current._next
+            counter += 1
+        return current
