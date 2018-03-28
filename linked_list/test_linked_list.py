@@ -1,3 +1,7 @@
+import pytest
+from linked_list import LinkedList as ll
+
+
 def test_insert_first_node(empty_ll):
     """test for insert node"""
     assert empty_ll.head is None
@@ -43,3 +47,8 @@ def test_insert_before(small_ll):
 def test_insert_after(small_ll):
     small_ll.insert_after(2, 10)
     assert str(small_ll) == '[1, 2, 10, 3, 4]'
+
+
+def test_type_error_with_linked_list():
+    with pytest.raises(TypeError):
+        ll(10)

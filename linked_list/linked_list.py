@@ -11,7 +11,7 @@ class LinkedList:
             for item in reversed(iter):
                 self.insert(item)
         except TypeError:
-            print('It\'s not a iterable type.')
+            raise TypeError('It\'s not a iterable type.')
 
     def __str__(self):
         """return all item values in singly linked list"""
