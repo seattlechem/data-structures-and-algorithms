@@ -1,23 +1,3 @@
-import pytest
-from linked_list import LinkedList as ll
-from node import Node
-
-
-@pytest.fixture
-def empty_ll():
-    return ll()
-
-
-@pytest.fixture
-def small_ll():
-    return ll([1, 2, 3, 4])
-
-
-@pytest.fixture
-def test_node():
-    return Node(3, 4)
-
-
 def test_insert_first_node(empty_ll):
     """test for insert node"""
     assert empty_ll.head is None
@@ -43,3 +23,8 @@ def test_empty_str(empty_ll):
 def test_str_node(test_node):
     """test for str representation of node"""
     assert str(test_node) == '3'
+
+
+def test_append(small_ll):
+    small_ll.append(5)
+    assert str(small_ll) == '[1, 2, 3, 4, 5]'

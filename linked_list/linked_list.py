@@ -30,7 +30,7 @@ class LinkedList:
         return self._len
 
     def insert(self, val):
-        """insert item to singly linked list"""
+        """insert item into the beginning of singly linked list"""
         self.head = Node(val, self.head)
         self._len += 1
 
@@ -45,3 +45,15 @@ class LinkedList:
             else:
                 current = current._next
         return False
+
+    def append(self, val):
+        """
+            Insert a value at the end of list
+        """
+        if self.head is None:
+            self.head = Node(val)
+            return
+        current = self.head
+        while current._next is not None:
+            current = current._next
+        current._next = Node(val)
