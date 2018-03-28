@@ -33,3 +33,8 @@ def test_str_node(test_node):
 def test_append(small_ll):
     small_ll.append(5)
     assert str(small_ll) == '[1, 2, 3, 4, 5]'
+
+
+def test_insert_before(small_ll):
+    small_ll.insert_before(2, 10)
+    assert str(small_ll) == '[1, 10, 2, 3, 4]'
