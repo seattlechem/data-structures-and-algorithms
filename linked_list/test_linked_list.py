@@ -5,6 +5,11 @@ def test_insert_first_node(empty_ll):
     assert empty_ll.head.val == 2
 
 
+def test_find(small_ll):
+    """test for find method"""
+    assert small_ll.find(2) is True
+
+
 def test_len(small_ll):
     """test len for LinkedList"""
     assert len(small_ll) == 4
