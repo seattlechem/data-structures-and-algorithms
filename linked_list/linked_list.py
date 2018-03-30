@@ -17,7 +17,7 @@ class LinkedList:
         if self.head is None:
             return 'List is empty'
         current = self.head
-        while True:
+        while current:
             if current is None:
                 break
             lis.append(current.val)
@@ -37,9 +37,8 @@ class LinkedList:
             and return True or False
         """
         current = self.head
-        while current is not None:
+        while current:
             if current.val == val:
                 return True
-            else:
-                current = current._next
+            current = current._next
         return False
