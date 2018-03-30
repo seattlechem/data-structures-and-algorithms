@@ -3,6 +3,7 @@ from .linked_list import LinkedList as ll
 from .node import Node
 
 
+
 @pytest.fixture
 def empty_ll():
     return ll()
