@@ -6,7 +6,7 @@ class LinkedList:
     def __init__(self, iter=[]):
         self.head = None
         self._len = 0
-        if isinstance(iter, (str, tuple, list)):
+        if not isinstance(iter, (str, tuple, list)):
             raise TypeError('It\'s not an iterable type.')
         for item in reversed(iter):
             self.insert(item)
