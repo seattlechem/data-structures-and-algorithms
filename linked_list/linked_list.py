@@ -1,4 +1,4 @@
-from node import Node
+from .node import Node
 
 
 class LinkedList:
@@ -6,12 +6,11 @@ class LinkedList:
     def __init__(self, iter=[]):
         self.head = None
         self._len = 0
-
-        try:
-            for item in reversed(iter):
-                self.insert(item)
-        except TypeError:
-            raise TypeError('It\'s not a iterable type.')
+        if not isinstance(iter, (str, tuple, list)):
+            raise TypeError('It\'s not an iterable type.')
+        for item in reversed(iter):
+            self.insert(item)
+            
 
     def __str__(self):
         """return all item values in singly linked list"""
@@ -19,7 +18,7 @@ class LinkedList:
         if self.head is None:
             return 'List is empty'
         current = self.head
-        while True:
+        while current:
             if current is None:
                 break
             lis.append(current.val)
@@ -39,11 +38,10 @@ class LinkedList:
             and return True or False
         """
         current = self.head
-        while current is not None:
+        while current:
             if current.val == val:
                 return True
-            else:
-                current = current._next
+            current = current._next
         return False
 
     def append(self, val):
