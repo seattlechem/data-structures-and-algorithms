@@ -6,12 +6,10 @@ class LinkedList:
     def __init__(self, iter=[]):
         self.head = None
         self._len = 0
-
-        try:
-            for item in reversed(iter):
-                self.insert(item)
-        except TypeError:
-            print('It\'s not a iterable type.')
+        if isinstance(iter, (str, tuple, list)):
+            raise TypeError('It\'s not an iterable type.')
+        for item in reversed(iter):
+            self.insert(item)
 
     def __str__(self):
         """return all item values in singly linked list"""
