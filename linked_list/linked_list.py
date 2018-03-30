@@ -92,3 +92,20 @@ class LinkedList:
             current = current._next
             counter += 1
         return current
+
+    def has_loop(self):
+        '''
+        It returns True if linked list contains a loop;
+        False if there is no loop present in the
+        linked list
+         '''
+        slow = self.head
+        fast = self.head
+
+        while fast._next and fast._next._next:
+            slow = slow._next
+            fast = fast._next._next
+            if slow == fast:
+                return True
+            pass
+        return False

@@ -62,3 +62,8 @@ def test_kth_from_end_Type_Error(small_ll):
 def test_kth_from_end_Value_Error(small_ll):
     with pytest.raises(ValueError):
         assert small_ll.kth_from_end(6).val == 3
+
+
+def test_has_loop_false(small_ll):
+    ''' test a linked list containing no loop '''
+    assert small_ll.has_loop() is False
