@@ -1,3 +1,4 @@
+import pytest
 from .node import Node
 
 
@@ -52,7 +53,7 @@ class LinkedList:
             self.head = Node(val)
             return
         current = self.head
-        while current._next is not None:
+        while current._next:
             current = current._next
         current._next = Node(val)
 
@@ -60,6 +61,8 @@ class LinkedList:
         """ add a new node with the given new_value immediately before the
         first value node """
         current = self.head
+        if val > len(self):
+            raise ValueError('Position to add is incorrect.')
         while current._next.val != val:
             current = current._next
         current._next = Node(new_val, current._next)
@@ -70,6 +73,8 @@ class LinkedList:
         newValue immediately after the first value node
         """
         current = self.head
+        if val > len(self):
+            raise ValueError('Position to add is incorrect.')
         while current.val != val:
             current = current._next
         current._next = Node(new_val, current._next)
