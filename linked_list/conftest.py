@@ -1,6 +1,6 @@
 import pytest
-from linked_list import LinkedList as ll
-from node import Node
+from .linked_list import LinkedList as ll
+from .node import Node
 
 
 @pytest.fixture
