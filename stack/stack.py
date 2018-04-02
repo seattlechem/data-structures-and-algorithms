@@ -24,10 +24,10 @@ class Stack:
 
     def pop(self):
         ''' Remove node at the top. Decrease size by 1 and return node'''
-        nd = self.top
+        node = self.top
         self.top = self.top._next
         self._size -= 1
-        return nd
+        return node
 
     def peek(self):
         ''' Look at the val at the top'''
