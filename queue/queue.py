@@ -8,7 +8,7 @@ class Queue:
 
         if not isinstance(iter, (list, dict, tuple)):
             ''' check for iterable'''
-            raise TypeError('It is not iterable.')  
+            raise TypeError('It is not iterable.')
         for i in iter:
             self.enqueue(i)
 
