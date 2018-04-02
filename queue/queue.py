@@ -1,7 +1,7 @@
-from .node import node
+from .node import Node
 
 
- class Queue:
+class Queue:
     def __init__(self, iter=[]):
         self.head = None
         self._size = 0

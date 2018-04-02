@@ -1,4 +1,4 @@
-from .queue import queue
+from .queue import Queue
 import pytest
 
 
