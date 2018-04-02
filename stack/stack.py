@@ -8,16 +8,13 @@ class Stack:
 
         if not isinstance(iterable, (list, dict, tuple)):
             ''' check if iterable'''
-            raise TypeError('It is not iterable.')   
+            raise TypeError('It is not iterable.')
         for i in iterable:
             self.push(i)
 
     def push(self, val):
         ''' Add a node'''
-        try:
-            node = Node(val)
-        except TypeError:
-            raise TypeError('None value cannot be added.')
+        node = Node(val)
 
         node._next = self.top
         self.top = node
