@@ -11,5 +11,7 @@ def empty_animalshelter():
 
 def test_enqueue(empty_animalshelter):
     new_dog = Dog('dog1')
-    dog_inserted = empty_animalshelter.enqueue(new_dog)
-    assert type(dog_inserted.dequeue()) == 'Dog'
+    # import pdb; pdb.set_trace()
+    empty_animalshelter.enqueue(new_dog)
+    empty_animalshelter.enqueue(new_dog)
+    assert type(empty_animalshelter.dequeue('Dog')) == 'Dog'
