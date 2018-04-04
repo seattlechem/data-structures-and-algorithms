@@ -20,7 +20,6 @@ class Queue:
             self.front = self.back = node
             self._length += 1
             return node
-        # self.back.next = self.back = node
         self.back.next = node
         self.back = node
         self._length += 1
