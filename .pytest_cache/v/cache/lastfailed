@@ -1,5 +1,0 @@
-{
-  "challenges/largest_product/shift-array/test_shift_array.py::test_insert_shift_array_fail": true,
-  "linked_list/test_linked_list.py::test_kth_from_end": true,
-  "linked_list/test_linked_list.py::test_kth_from_end_Name_Error": true
-}
