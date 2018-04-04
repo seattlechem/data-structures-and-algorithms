@@ -50,21 +50,45 @@ def test_str_node(test_node):
 
 
 def test_append(small_ll):
+    ''' test for append'''
     small_ll.append(5)
     assert str(small_ll) == '[1, 2, 3, 4, 5]'
 
 
 def test_insert_before(small_ll):
+    ''' test for insert_before''' 
     small_ll.insert_before(2, 10)
     assert str(small_ll) == '[1, 10, 2, 3, 4]'
 
 
+def test_insert_before_value_error(small_ll):
+    ''' test for insert_before value error
+    when trying to add value at out of
+    index point
+    ''' 
+    with pytest.raises(ValueError):
+        small_ll.insert_before(5, 10)
+
+
 def test_insert_after(small_ll):
+    ''' test for insert_after'''
     small_ll.insert_after(2, 10)
     assert str(small_ll) == '[1, 2, 10, 3, 4]'
 
 
+def test_insert_after_value_error(small_ll):
+    ''' test for insert_after value error
+    when trying to add value at out of
+    index point
+    ''' 
+    with pytest.raises(ValueError):
+        small_ll.insert_before(5, 10)
+
+
 def test_type_error_with_linked_list():
+    ''' test for linked_list when trying to
+    instantiate with uniterate value
+    ''' 
     with pytest.raises(TypeError):
         ll(10)
 
