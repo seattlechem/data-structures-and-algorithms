@@ -7,22 +7,29 @@ class AnimalShelter:
         self.pseudo_queue = Queue()
         self._size = 0
 
-    def enqueue(self, val):
+    def enqueue(self, obj):
         """ add either a dog or cat object """
-        self.pseudo_queue.enqueue(val)
+        self.pseudo_queue.enqueue(obj)
 
     def dequeue(self, pref):
         """ return either the longest-waiting cat or dog"""
-        # change pref to only first character to upper
-        # type(curret) = Cat
+        pref = pref.lower()
+        pref = '{}{}'.format(pref[0].upper, pref[1:])
+
         if type(self.pseudo_queue.dequeue()) == pref:
             return self.pseudo_queue.dequeue()
-        
+
         current = self.pseudo_queue.dequeue()
+        first_obj_name = current.name
         while type(current) != pref:
             self.pseudo_queue.enqueue(current)
             current = self.pseudo_queue.dequeue()
-        
-        # another while loop to back things back to order
-        
+
+        if self.pseudo_queue.dequeue().name == first_obj_name:
+            return
+        while True:
+            if self.pseudo_queue.dequeue().name != first_obj_name:
+                self.pseudo_queue.enqueue(self.pseudo_queue.dequeue())
+            break
+
         return current
