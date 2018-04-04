@@ -16,22 +16,22 @@ class Queue:
     def enqueue(self, val):
         ''' add a value, increase size by 1'''
         node = Node(val)
-        if self._length == 0:
+        if self._size == 0:
             self.front = self.back = node
-            self._length += 1
+            self._size += 1
             return node
         # self.back.next = self.back = node
         self.back.next = node
         self.back = node
-        self._length += 1
+        self._size += 1
         return node
 
     def dequeue(self):
         ''' remove node from the front of queue'''
-        if self._length == 0:
+        if self._size == 0:
             raise IndexError
 
         temp = self.front
-        self.front = temp.next
-        self._length -= 1
+        self.front = temp._next
+        self._size -= 1
         return temp
