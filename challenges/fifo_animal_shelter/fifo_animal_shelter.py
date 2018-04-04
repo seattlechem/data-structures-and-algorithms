@@ -5,11 +5,12 @@ class AnimalShelter:
     """ AnimalShelter class"""
     def __init__(self):
         self.pseudo_queue = Queue()
-        self._size = 0
+        self._length = 0
 
     def enqueue(self, obj):
         """ add either a dog or cat object """
         self.pseudo_queue.enqueue(obj)
+        self._length += 1
 
     def dequeue(self, pref):
         """ return either the longest-waiting cat or dog"""
