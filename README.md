@@ -5,4 +5,5 @@ Data structures and algorithms challenges
 1. shift-array
 2. binary-search
 3. largest-product
+4. queue with stacks (Challenge 11)
 
