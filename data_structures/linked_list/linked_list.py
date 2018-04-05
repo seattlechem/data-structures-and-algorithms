@@ -1,4 +1,3 @@
-import pytest
 from .node import Node
 
 
@@ -11,7 +10,6 @@ class LinkedList:
             raise TypeError('It\'s not an iterable type.')
         for item in reversed(iter):
             self.insert(item)
-            
 
     def __str__(self):
         """return all item values in singly linked list"""
@@ -87,7 +85,7 @@ class LinkedList:
             raise TypeError('Use only number.')
         if k >= length:
             raise ValueError('It goes over the range.')
-        
+
         counter = 0
         current = self.head
         while counter != length - (k + 1):
