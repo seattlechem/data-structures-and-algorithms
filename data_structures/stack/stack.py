@@ -14,13 +14,14 @@ class Stack:
 
     def push(self, val):
         """ Add a node"""
-        node = Node(val)
+        if isinstance(val, Node) is True:
+            node = val
+        else:
+            node = Node(val)
 
         node._next = self.top
         self.top = node
         self._size += 1
-
-        return self.top
 
     def pop(self):
         """ Remove node at the top. Decrease size by 1 and return node"""
