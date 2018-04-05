@@ -3,7 +3,6 @@ brackets = {'{': 0, '}': 0, '[': 0, ']': 0, '(': 0, ')': 0}
 
 def multi_bracket_validation(string):
     for i in string:
-        import pdb; pdb.set_trace()
         for key, val in brackets.items():
             if i == key:
                 brackets[key] += 1
