@@ -15,8 +15,8 @@ class Queue:
 
     def dequeue(self):
         """ extract the first value out """
-        # if self._size == 0:
-        #     raise TypeError('Cannot dequeue the empty queue object')
+        if self._size == 0:
+            raise IndexError('Cannot dequeue the empty queue object')
 
         while self.stack1._size != 0:
             self.stack2.push(self.stack1.pop())
