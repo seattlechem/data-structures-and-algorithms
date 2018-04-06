@@ -65,13 +65,13 @@ def test_insert_before_value_error(small_ll):
     ''' test for insert_before value error
     when trying to add value at out of
     index point
-    ''' 
+    '''
     with pytest.raises(ValueError):
         small_ll.insert_before(5, 10)
 
 
 def test_insert_after(small_ll):
-    ''' test for insert_after'''
+    """ test for insert_after"""
     small_ll.insert_after(2, 10)
     assert str(small_ll) == '[1, 2, 10, 3, 4]'
 
@@ -80,7 +80,7 @@ def test_insert_after_value_error(small_ll):
     ''' test for insert_after value error
     when trying to add value at out of
     index point
-    ''' 
+    '''
     with pytest.raises(ValueError):
         small_ll.insert_before(5, 10)
 
