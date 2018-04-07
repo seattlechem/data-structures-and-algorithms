@@ -103,13 +103,15 @@ def test_kth_from_end_Value_Error(small_ll):
         assert small_ll.kth_from_end(6).val == 3
 
 
+def test_kth_from_end_true(small_ll):
+    '''
+    test True case for kth_from_end
+    the order of small_ll nodes = [1, 2, 3, 4]
+    '''
+    assert small_ll.kth_from_end(2).val == 3
+    assert small_ll.kth_from_end(3).val == 2
+
+
 def test_has_loop_false(small_ll):
     """ test a linked list containing no loop """
     assert small_ll.has_loop() is False
-
-
-def test_kth_from_end_true(small_ll):
-    """ test True case for kth_from_end """
-    assert small_ll.kth_from_end(2).val == 2
-    small_ll.append(8)
-    assert small_ll.kth_from_end(3).val == 2
