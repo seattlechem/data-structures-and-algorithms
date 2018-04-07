@@ -115,3 +115,18 @@ def test_kth_from_end_true(small_ll):
 def test_has_loop_false(small_ll):
     """ test a linked list containing no loop """
     assert small_ll.has_loop() is False
+
+
+def test_has_loop_true(small_linked_list_with_loop):
+    """ test for linked list containing loop """
+    assert small_linked_list_with_loop.has_loop() is True
+
+
+def test_long_linked_list_has_loop_true(big_linked_list_with_loop):
+    """ test for long linked list containing loop """
+    assert big_linked_list_with_loop.has_loop() is True
+
+
+def test_long_linked_list(long_linked_list):
+    """ test to see if a linked list containing a loop """
+    assert long_linked_list.has_loop() is False
