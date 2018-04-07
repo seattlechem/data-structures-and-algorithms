@@ -12,14 +12,14 @@ def test_insert_first_node(empty_ll):
 
 
 def test_insert_empty_list(small_ll):
-    ''' test for insert empty list'''
+    """ test for insert empty list"""
     small_ll.insert([])
     assert small_ll.head.val == []
 
 
 def test_instantiate_non_iterable():
-    ''' test for type error occurred when
-    intantiate with non-literable '''
+    """ test for type error occurred when
+    intantiate with non-literable """
     with pytest.raises(TypeError):
         ll(3)
 
@@ -62,10 +62,10 @@ def test_insert_before(small_ll):
 
 
 def test_insert_before_value_error(small_ll):
-    ''' test for insert_before value error
+    """ test for insert_before value error
     when trying to add value at out of
     index point
-    '''
+    """
     with pytest.raises(ValueError):
         small_ll.insert_before(5, 10)
 
@@ -77,18 +77,18 @@ def test_insert_after(small_ll):
 
 
 def test_insert_after_value_error(small_ll):
-    ''' test for insert_after value error
+    """ test for insert_after value error
     when trying to add value at out of
     index point
-    '''
+    """
     with pytest.raises(ValueError):
         small_ll.insert_before(5, 10)
 
 
 def test_type_error_with_linked_list():
-    ''' test for linked_list when trying to
+    """ test for linked_list when trying to
     instantiate with uniterate value
-    '''
+    """
     with pytest.raises(TypeError):
         ll(10)
 
@@ -104,10 +104,10 @@ def test_kth_from_end_Value_Error(small_ll):
 
 
 def test_kth_from_end_true(small_ll):
-    '''
+    """
     test True case for kth_from_end
     the order of small_ll nodes = [1, 2, 3, 4]
-    '''
+    """
     assert small_ll.kth_from_end(2).val == 3
     assert small_ll.kth_from_end(3).val == 2
 

@@ -2,21 +2,21 @@ import pytest
 
 
 def test_empty_queue_size(empty_queue):
-    '''
+    """
     test to see if dequeue on an instance of
     Queue object which has only one value
     returns the expected value.
-    '''
+    """
     empty_queue.enqueue(3)
     output = empty_queue.dequeue()
     assert output.val == 3
 
 
 def test_dequeue_on_empty_queue(empty_queue):
-    '''
+    """
     test to see if dequeue on an instance of empty
     Queue object raises error
-    '''
+    """
     with pytest.raises(IndexError):
         empty_queue.dequeue()
 
@@ -27,14 +27,14 @@ def test_small_queue_size(small_queue):
 
 
 def test_small_queue_dequeue(small_queue):
-    '''
+    """
     small_queue is an instance of Queue object. Values from 0 to 99 were
     enqueued into stack1 of this instance in order.
     This tests if the order of values enqueued is preserved even after
     invoking dequeue method for 2 times consecutively, followed by
     enqueue, and finally dequeue. The expected value of node from the last
     dequeue is confirmed from this test.
-    '''
+    """
     small_queue.dequeue()
     small_queue.dequeue()
     small_queue.enqueue(122)
