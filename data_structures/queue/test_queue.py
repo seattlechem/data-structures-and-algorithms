@@ -10,10 +10,10 @@ def test_enqueue(empty_queue):
 
 
 def test_empty_argument_enqueue(empty_queue):
-    '''
+    """
     test to see if TypeError is raised when invoke
     enqueue with no argument
-    '''
+    """
     with pytest.raises(TypeError):
         empty_queue.enqueue()
 
@@ -24,9 +24,9 @@ def test_dequeue(small_queue):
 
 
 def test_index_error_dequeue(empty_queue):
-    '''
+    """
     test to see if index error raises when trying to \
     dequeue the empty queue
-    '''
+    """
     with pytest.raises(IndexError):
         empty_queue.dequeue()
