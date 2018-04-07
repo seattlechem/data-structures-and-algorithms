@@ -56,8 +56,10 @@ class LinkedList:
         current._next = Node(val)
 
     def insert_before(self, val, new_val):
-        """ add a new node with the given new_value immediately before the
-        first value node """
+        """
+        add a new node with the given new_value immediately before the
+        first value node
+        """
         current = self.head
         if val > len(self):
             raise ValueError('Position to add is incorrect.')
@@ -78,8 +80,10 @@ class LinkedList:
         current._next = Node(new_val, current._next)
 
     def kth_from_end(self, k):
-        ''' takes a number, k, as an argument. Return the node
-        that is k from the end of the linked list.'''
+        """
+        takes a number, k, as an argument. Return the node
+        that is k from the end of the linked list.
+        """
         length = len(self)
         if type(k) != int:
             raise TypeError('Use only number.')
@@ -92,11 +96,11 @@ class LinkedList:
         return current
 
     def has_loop(self):
-        '''
+        """
         It returns True if linked list contains a loop;
         False if there is no loop present in the
         linked list
-         '''
+        """
         slow = self.head
         fast = self.head
 
