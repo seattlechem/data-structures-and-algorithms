@@ -50,13 +50,13 @@ def test_str_node(test_node):
 
 
 def test_append(small_ll):
-    ''' test for append'''
+    """ test for append"""
     small_ll.append(5)
     assert str(small_ll) == '[1, 2, 3, 4, 5]'
 
 
 def test_insert_before(small_ll):
-    ''' test for insert_before''' 
+    """ test for insert_before """
     small_ll.insert_before(2, 10)
     assert str(small_ll) == '[1, 10, 2, 3, 4]'
 
@@ -88,7 +88,7 @@ def test_insert_after_value_error(small_ll):
 def test_type_error_with_linked_list():
     ''' test for linked_list when trying to
     instantiate with uniterate value
-    ''' 
+    '''
     with pytest.raises(TypeError):
         ll(10)
 
@@ -104,5 +104,12 @@ def test_kth_from_end_Value_Error(small_ll):
 
 
 def test_has_loop_false(small_ll):
-    ''' test a linked list containing no loop '''
+    """ test a linked list containing no loop """
     assert small_ll.has_loop() is False
+
+
+def test_kth_from_end_true(small_ll):
+    """ test True case for kth_from_end """
+    assert small_ll.kth_from_end(2).val == 2
+    small_ll.append(8)
+    assert small_ll.kth_from_end(3).val == 2
