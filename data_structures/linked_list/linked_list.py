@@ -1,4 +1,4 @@
-from .node import Node
+from node import Node
 
 
 class LinkedList:
@@ -86,11 +86,9 @@ class LinkedList:
         if k >= length:
             raise ValueError('It goes over the range.')
 
-        counter = 0
         current = self.head
-        while counter != length - (k + 1):
+        for i in range(0, length - k):
             current = current._next
-            counter += 1
         return current
 
     def has_loop(self):
