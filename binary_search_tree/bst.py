@@ -40,11 +40,27 @@ class BST:
 
         _walk(self.root)
 
+    def pre_order(self, operation):
+        def _walk(node=None):
+            if node is None:
+                return
+
+            if node.left is not None:
+                _walk(node.left)
+
+            if node.right is not None:
+                _walk(node.right)
+
+            operation(node)
+
+        _walk(self.root)
+
     def insert(self, val):
         if isinstance(val, Node):
             node = val
         else:
             node = Node(val)
+
         current = self.root
 
         if self.root is None:
