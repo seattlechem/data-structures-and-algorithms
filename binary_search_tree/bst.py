@@ -83,18 +83,21 @@ class BST:
             return node
 
         while current:
-            if val >= current.val:
-                if current.right is not None:
-                    current = current.right
-                else:
-                    current.right = node
-                    break
+            try:
+                if val >= current.val:
+                    if current.right is not None:
+                        current = current.right
+                    else:
+                        current.right = node
+                        break
 
-            elif val < current.val:
-                if current.left is not None:
-                    current = current.left
-                else:
-                    current.left = node
-                    break
+                elif val < current.val:
+                    if current.left is not None:
+                        current = current.left
+                    else:
+                        current.left = node
+                        break
+            except TypeError:
+                raise TypeError('the value cannot be compared')
 
         return node
