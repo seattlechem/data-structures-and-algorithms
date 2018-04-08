@@ -45,6 +45,21 @@ class BST:
             if node is None:
                 return
 
+            operation(node)
+
+            if node.left is not None:
+                _walk(node.left)
+
+            if node.right is not None:
+                _walk(node.right)
+
+        _walk(self.root)
+
+    def post_order(self, operation):
+        def _walk(node=None):
+            if node is None:
+                return
+
             if node.left is not None:
                 _walk(node.left)
 
