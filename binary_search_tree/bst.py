@@ -5,15 +5,19 @@ class Node:
         self.left = None
 
     def __repr__(self):
-        return '<Node Val: {}'.format(self.val)
+        return '<Node Val: {}>'.format(self.val)
 
     def __str__(self):
         return self.val
 
 
 class BST:
-    def __init__(self):
+    def __init__(self, iter=[]):
         self.root = None
+        if not isinstance(iter, (str, tuple, list)):
+            raise TypeError('It\'s not an iterable type.')
+        for item in iter:
+            self.insert(item)
 
     def __repr__(self):
         return '<BST Root {}>'.format(self.root.val)
@@ -37,7 +41,10 @@ class BST:
         _walk(self.root)
 
     def insert(self, val):
-        node = Node(val)
+        if isinstance(val, Node):
+            node = val
+        else:
+            node = Node(val)
         current = self.root
 
         if self.root is None:
@@ -59,4 +66,4 @@ class BST:
                     current.left = node
                     break
 
-        return node  
+        return node
