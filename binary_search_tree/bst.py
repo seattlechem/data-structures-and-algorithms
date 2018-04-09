@@ -20,10 +20,11 @@ class BST:
             self.insert(item)
 
     def __repr__(self):
-        return '<BST Root {}>'.format(self.root.val)
+        return '<BST Root: {}>'.format(self.root.val)
 
     def __str__(self):
-        return self.root.val
+        val = self.root.val
+        return str(val)
 
     def in_order(self, operation):
         def _walk(node=None):
