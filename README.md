@@ -11,6 +11,7 @@ Data structures and algorithms challenges
 7. multi-bracket-validation(Challenge 13)
 8. Tower of Hanoi (Challenge 14)
 9. FizzBuzz (Challenge 16)
+10. breadth_first_traversal (Challenge 17)
 
 ## BST
 1. BST class and methods
