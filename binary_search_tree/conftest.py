@@ -13,5 +13,10 @@ def five_element_bst():
 
 
 @pytest.fixture
+def seven_element_bst():
+    return BST([15, 10, 12, 23, 9, 0, 30])
+
+
+@pytest.fixture
 def empty_bst():
     return BST()
