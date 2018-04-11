@@ -12,6 +12,7 @@ Data structures and algorithms challenges
 8. Tower of Hanoi (Challenge 14)
 9. FizzBuzz (Challenge 16)
 10. breadth_first_traversal (Challenge 17)
+11. find_maximum_value (Challenge 18)
 
 ## BST
 1. BST class and methods
