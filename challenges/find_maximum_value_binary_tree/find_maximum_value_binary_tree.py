@@ -2,6 +2,10 @@ from .bst import BST
 
 
 def find_maximum_value(bst):
+    """ function finding max value from bst input \
+        it checks if input is of BST type \
+        and if root is empty
+    """
     if not isinstance(bst, BST):
         raise TypeError('It\'s not a BST type.')
 
