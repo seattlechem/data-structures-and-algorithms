@@ -14,3 +14,8 @@ def square_true_string():
 @pytest.fixture
 def mixed_square_true_string():
     return 'a[b]c[dd[ee]]f[g]'
+
+
+@pytest.fixture
+def two_bracket():
+    return ')('
