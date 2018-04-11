@@ -11,6 +11,8 @@ def test_push(empty_stack):
 
 
 def test_typeerror_empty_stack():
+    """ test for TypeError when you try to make an \
+    instance of non-iterable argument."""
     with pytest.raises(TypeError):
         Stack(34-32)
 
@@ -20,6 +22,20 @@ def test_peek(small_stack):
     assert small_stack.peek().val == 5
 
 
+def test_empty_peek():
+    """ test for peek on empty stack"""
+    with pytest.raises(IndexError):
+        empty = Stack()
+        empty.peek()
+
+
 def test_pop(small_stack):
     """ test for pop """
     assert small_stack.pop().val == 5
+
+
+def test_empty_pop():
+    """ test for pop on empty stack"""
+    with pytest.raises(IndexError):
+        empty = Stack()
+        empty.pop()
