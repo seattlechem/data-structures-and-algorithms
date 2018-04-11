@@ -25,6 +25,9 @@ class Stack:
 
     def pop(self):
         """ Remove node at the top. Decrease size by 1 and return node"""
+        if self.top is None:
+            raise IndexError('You cannot remove a node from empty stack.')
+
         node = self.top
         self.top = self.top._next
         self._size -= 1
@@ -32,4 +35,6 @@ class Stack:
 
     def peek(self):
         """ Look at the val at the top"""
+        if self.top is None:
+            raise IndexError('It is an empty stack.')
         return self.top
