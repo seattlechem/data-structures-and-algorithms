@@ -1,7 +1,7 @@
 from .bst import BST
 
 
-def breadthFirstTraversal(bst=[]):
+def breadthFirstTraversal(bst):
     if not isinstance(bst, BST):
         raise TypeError('It\'s not a BST type.')
 
