@@ -2,6 +2,7 @@ from .fizz_buzz_tree import FizzBuzzTree
 
 
 def test_FizzBuzzTree_true(five_element_bst):
+    """ test for five element bst """
     ls = []
     FizzBuzzTree(five_element_bst)
     five_element_bst.in_order(lambda n: ls.append(n.val))
@@ -9,6 +10,7 @@ def test_FizzBuzzTree_true(five_element_bst):
 
 
 def test_FizzBuzzTree_eleven_true(eleven_element_bst):
+    """ test for eleven element bst """
     ls = []
     FizzBuzzTree(eleven_element_bst)
     eleven_element_bst.pre_order(lambda n: ls.append(n.val))
@@ -16,6 +18,7 @@ def test_FizzBuzzTree_eleven_true(eleven_element_bst):
 
 
 def test_FizzBuzzTree_eleven_post_true(eleven_element_bst):
+    """ test for eleven element bst """
     ls = []
     FizzBuzzTree(eleven_element_bst)
     eleven_element_bst.post_order(lambda n: ls.append(n.val))
@@ -23,6 +26,7 @@ def test_FizzBuzzTree_eleven_post_true(eleven_element_bst):
 
 
 def test_FizzBuzzTree_fizzbuzz(seven_element_bst):
+    """ test for seven element bst """
     ls = []
     seven_element_bst.in_order(lambda n: ls.append(n.val))
     15, 10, 12, 23, 9, 0, 30
