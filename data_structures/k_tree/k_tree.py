@@ -1,3 +1,6 @@
+from .queue import Queue
+
+
 class Node:
     def __init__(self, val=None):
         """ create an instance of Node object """
@@ -53,4 +56,16 @@ class KTree:
                 operation(node)
 
         _walk(self.root)
-        
+
+    def breadth_first_traversal(self, operation):
+        """ KTree breadth_first_traversal """
+        queue = Queue()
+        queue.enqueue(self.root)
+
+        while len(queue) > 0:
+            current = queue.dequeue()
+            operation(current)
+
+            if current.children is not None:
+                for child in current.children:
+                    queue.enqueue(child)
