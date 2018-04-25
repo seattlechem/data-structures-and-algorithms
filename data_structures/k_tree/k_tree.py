@@ -69,3 +69,16 @@ class KTree:
             if current.children is not None:
                 for child in current.children:
                     queue.enqueue(child)
+
+    def insert(self, val):
+        """ insert value to KTree """
+        if isinstance(val, Node):
+            node = val
+        else:
+            node = Node(val)
+
+        current = self.root
+
+        if self.root is None:
+            self.root = node
+            return node
