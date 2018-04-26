@@ -13,7 +13,8 @@ def test_small_tree_find_five(small_tree):
     result = find_matches(small_tree, 5)
     # import pdb; pdb.set_trace()
     assert isinstance(result, list) is True
-    for _ in range(0, 3):
-        ls.append(Node(5))
+    ls.append(small_tree.root.children[0])
+    ls.append(small_tree.root.children[0].children[0])
+    ls.append(small_tree.root.children[3])
     # import pdb; pdb.set_trace()
     assert result == ls
