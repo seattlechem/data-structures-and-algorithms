@@ -43,9 +43,8 @@ class KTree:
 
             operation(node)
 
-            if node.children is not None:
-                for child in node.children:
-                    _walk(child)
+            for child in node.children:
+                _walk(child)
 
         _walk(self.root)
 
@@ -55,11 +54,10 @@ class KTree:
             if node is None:
                 return
 
-            if node.children is not None:
-                for child in node.children:
-                    _walk(child)
+            for child in node.children:
+                _walk(child)
 
-                operation(node)
+            operation(node)
 
         _walk(self.root)
 
