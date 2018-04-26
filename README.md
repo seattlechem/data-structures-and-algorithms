@@ -13,6 +13,8 @@ Data structures and algorithms challenges
 9. FizzBuzz (Challenge 16)
 10. breadth_first_traversal (Challenge 17)
 11. find_maximum_value (Challenge 18)
+12. print_level_order (Challenge 27)
+13. find_matches (Challenge 28)
 
 ## BST
 1. BST class and methods
