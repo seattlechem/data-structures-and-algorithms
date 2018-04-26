@@ -25,3 +25,10 @@ def test_small_tree_not_found(small_tree):
     """Check if code break when searching for value not found."""
     result = find_matches(small_tree, 2)
     assert result == []
+
+
+def test_empty_ktree():
+    """Check if code break when searching for value in empty ktree."""
+    tree = KTree()
+    result = find_matches(tree, 2)
+    assert result == []

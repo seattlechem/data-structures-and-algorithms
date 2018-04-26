@@ -10,7 +10,7 @@ def find_matches(ktree, target_value):
     Perform search for all nodes.
 
     if node's value matches with target_value, the node is
-    added to the linked list.
+    added to ist.
 
     """
     ls = list()
