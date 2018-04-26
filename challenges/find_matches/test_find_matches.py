@@ -11,10 +11,17 @@ def test_small_tree_find_five(small_tree):
     """Check if find_match function find all nodes with value 5."""
     ls = list()
     result = find_matches(small_tree, 5)
-    # import pdb; pdb.set_trace()
+
     assert isinstance(result, list) is True
+
     ls.append(small_tree.root.children[0])
     ls.append(small_tree.root.children[0].children[0])
     ls.append(small_tree.root.children[3])
-    # import pdb; pdb.set_trace()
+
     assert result == ls
+
+
+def test_small_tree_not_found(small_tree):
+    """Check if code break when searching for value not found."""
+    result = find_matches(small_tree, 2)
+    assert result == []
