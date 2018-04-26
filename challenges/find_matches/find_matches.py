@@ -13,17 +13,19 @@ def find_matches(ktree, target_value):
     added to the linked list.
 
     """
-    ls = LinkedList()
-
-    if ktree.root is None:
-        return
+    ls = list()
 
     def _walk(curr=None):
         """Define a helper function which traverses ktree."""
-        for child in curr.children:
-            _walk(child)
+        if curr is None:
+            return
 
         if curr.val == target_value:
             ls.append(curr)
 
+        for child in curr.children:
+            _walk(child)
+
     _walk(ktree.root)
+
+    return ls
