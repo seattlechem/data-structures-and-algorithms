@@ -26,7 +26,12 @@ class HashTable:
         self.buckets[self.hash_key(key)].insert({key: val})
 
     def get(self, key):
-        return self.buckets[self.hash_key(key)]
+        current = self.buckets[self.hash_key(key)].head
+        while current:
+            if current.val.keys() == key:
+                return self.buckets[self.hash_key(key)].vals()
+            current._next
+        return False
 
     def remove(self, key):
         temp = self.buckets[self.hash_key(key)]
