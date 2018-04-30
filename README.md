@@ -16,6 +16,10 @@ Data structures and algorithms challenges
 12. print_level_order (Challenge 27)
 13. find_matches (Challenge 28)
 
-## BST
+## Data Structures
 1. BST class and methods
+2. K Tree
+3. Linked List
+4. Queue
+5. Stack
 
