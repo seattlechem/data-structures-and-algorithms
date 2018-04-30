@@ -1,12 +1,13 @@
 """Hash Table Class"""
 from functools import reduce
+from .linked_list import LinkedList as LL
 
 
 class HashTable:
     def __init__(self, max_size=1024):
         """Make an instance of HashTable"""
         self.max_size = max_size
-        self.buckets = [None] * self.max_size
+        self.buckets = [LL() for _ in range(self.max_size)]
 
     def hash_key(self, key):
         """Obtain the hashed key"""
