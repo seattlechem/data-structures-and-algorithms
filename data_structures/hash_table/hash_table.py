@@ -4,10 +4,12 @@ from functools import reduce
 
 class HashTable:
     def __init__(self, max_size=1024):
+        """Make an instance of HashTable"""
         self.max_size = max_size
         self.buckets = [None] * self.max_size
 
     def hash_key(self, key):
+        """Obtain the hashed key"""
         if type(key) is not str:
             raise TypeError
         # ord return an iteger representing the unicode code point of that
@@ -18,8 +20,9 @@ class HashTable:
         return sum % self.buckets
 
     def set(self, key, val):
+        """Insert into hash table"""
         # insert an item at given hash key point
-        self.buckets[self.hash_key(key)] = val
+        self.buckets[self.hash_key(key)].insert({key: val})
 
     def get(self, key):
         return self.buckets[self.hash_key(key)]
