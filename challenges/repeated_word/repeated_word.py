@@ -8,6 +8,9 @@ def repeated_word(string_input):
     if string_input == '':
         raise ValueError('Input string is empty.')
 
+    if type(string_input) != str:
+        raise TypeError('Input must be a string.')
+
     ss = string_input.split(" ")
     hh = HH()
     i = 0

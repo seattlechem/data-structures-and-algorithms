@@ -20,3 +20,9 @@ def test_empty_string():
     """Value error check."""
     with pytest.raises(ValueError):
         repeated_word('')
+
+
+def test_type_error():
+    """Type error check."""
+    with pytest.raises(TypeError):
+        repeated_word(123)
