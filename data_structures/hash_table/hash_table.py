@@ -42,7 +42,7 @@ class HashTable:
         return False
 
     def remove(self, key):
-        """Remove the entry."""
+        """Reset the bucket containing the key."""
         temp = self.buckets[self.hash_key(key)]
         self.buckets[self.hash_key(key)] = None
         return temp

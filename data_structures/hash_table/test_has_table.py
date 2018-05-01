@@ -29,3 +29,19 @@ def test_set(small_string):
     hashe = HashTable()
     hashe.set(small_string, 12)
     assert len(hashe.buckets[hashe.hash_key(small_string)]) == 1
+
+
+def test_get(small_string):
+    """Confirm the get method."""
+    hashe = HashTable()
+    hashe.set(small_string, 12)
+    assert hashe.get(small_string) == 12
+
+
+def test_remove(small_string):
+    """Confirm the remove method."""
+    hashe = HashTable()
+    hashe.set(small_string, 256)
+    assert hashe.get(small_string) == 256
+    hashe.remove(small_string)
+    assert hashe.buckets[hashe.hash_key(small_string)] is None
