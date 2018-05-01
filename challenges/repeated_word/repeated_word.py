@@ -10,6 +10,6 @@ def repeated_word(string_input):
     i = 0
     while len(ss) > 0:
         if hh.get(ss[i]):
-            return ss
-        hh.set(ss, 1)
+            return ss[i]
+        hh.set(ss[i], 1)
         i += 1

@@ -10,5 +10,4 @@ def small_string():
 
 def test_repeated_word_true(small_string):
     result = repeated_word(small_string)
-    import pdb; pdb.set_trace()
     assert result == 'apple'
