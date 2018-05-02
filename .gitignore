@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-
-# Created by https://www.gitignore.io/api/code,macos,python
+# Created by https://www.gitignore.io/api/code,macos,python,django
 
 ### Code ###
 # Visual Studio Code - https://code.visualstudio.com/
@@ -8,6 +6,22 @@
 .vscode/
 tsconfig.json
 jsconfig.json
+
+##Adding media directory ###
+MEDIA/
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
+# in your Git repository. Update and uncomment the following line accordingly.
+# <django-project-name>/staticfiles/
 
 ### macOS ###
 *.DS_Store
@@ -37,13 +51,7 @@ Temporary Items
 .apdisk
 
 ### Python ###
-=======
-# DS_Store
-.DS_Store/
-
->>>>>>> master
 # Byte-compiled / optimized / DLL files
-__pycache__/
 *.py[cod]
 *$py.class
 
@@ -92,7 +100,6 @@ coverage.xml
 
 # Translations
 *.mo
-*.pot
 
 # Flask stuff:
 instance/
@@ -142,4 +149,4 @@ venv.bak/
 .mypy_cache/
 
 
-# End of https://www.gitignore.io/api/code,macos,python
+# End of https://www.gitignore.io/api/code,macos,python,django

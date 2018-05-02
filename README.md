@@ -15,7 +15,13 @@ Data structures and algorithms challenges
 11. find_maximum_value (Challenge 18)
 12. print_level_order (Challenge 27)
 13. find_matches (Challenge 28)
+14. Repeated word (Challenge 31)
+15. Tree interception (Challenge 32)
 
-## BST
+## Data Structures
 1. BST class and methods
+2. K Tree
+3. Linked List
+4. Queue
+5. Stack
 
