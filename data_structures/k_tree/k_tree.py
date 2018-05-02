@@ -17,7 +17,7 @@ class Node:
 
     def __str__(self):
         """Node class string printout."""
-        return self.val
+        return 'Node Val: {}'.format(self.val)
 
 
 class KTree:

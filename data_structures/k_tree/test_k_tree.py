@@ -1,5 +1,7 @@
 """Ptest cases."""
 import pytest
+from .k_tree import Node
+from .k_tree import KTree as KT
 
 
 def test_insert_small_ktree(small_tree):
@@ -27,3 +29,12 @@ def test_post_order_traversal(small_tree):
     ls = []
     small_tree.post_order(lambda n: ls.append(n.val))
     assert ls == [9, 3, 5]
+
+
+def test_ktree_node():
+    """Test if K-tree node is made properly."""
+    nd = Node(34)
+    assert nd.val == 34
+    assert nd.children == []
+    assert repr(nd) == '<Node Val: 34>'
+    assert str(nd) == 'Node Val: 34'
