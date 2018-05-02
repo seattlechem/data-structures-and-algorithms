@@ -1,7 +1,6 @@
 """HashTable test cases."""
 from .hash_table import HashTable
 import pytest
-# from .linked_list import LinkedList as LL
 
 
 def test_small_string_find(small_string):
@@ -57,3 +56,11 @@ def test_custom_hashtable_size():
     """Hashtable custom max size."""
     hashe = HashTable(33)
     assert hashe.max_size == 33
+
+
+def test_remove_key_not_string():
+    """Remove with no string key."""
+    hashe = HashTable()
+    with pytest.raises(TypeError) as err:
+        hashe.remove(123)
+        assert err.value == 'key must be string.'
