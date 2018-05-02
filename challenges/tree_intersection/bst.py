@@ -1,22 +1,29 @@
+"""Binary Tree class."""
+
+
 class Node:
+    """Node class definition."""
+
     def __init__(self, val):
-        """ node class constructor """
+        """Node class constructor."""
         self.val = val
         self.right = None
         self.left = None
 
     def __repr__(self):
-        """ node class representation """
+        """Node class representation."""
         return '<Node Val: {}>'.format(self.val)
 
     def __str__(self):
-        """ node class string printout """
+        """Node class string printout."""
         return self.val
 
 
 class BST:
+    """BST class definition."""
+
     def __init__(self, iter=[]):
-        """ BST constructor """
+        """BST constructor."""
         self.root = None
         if not isinstance(iter, (str, tuple, list)):
             raise TypeError('It\'s not an iterable type.')
@@ -24,16 +31,16 @@ class BST:
             self.insert(item)
 
     def __repr__(self):
-        """ BST representation """
+        """BST representation."""
         return '<BST Root: {}>'.format(self.root.val)
 
     def __str__(self):
-        """ BST string printout """
+        """BST string printout."""
         val = self.root.val
         return str(val)
 
     def in_order(self, operation):
-        """ in_order traversal """
+        """In_order traversal."""
         def _walk(node=None):
             if node is None:
                 return
@@ -49,7 +56,7 @@ class BST:
         _walk(self.root)
 
     def pre_order(self, operation):
-        """ pre_order traversal """
+        """Pre_order traversal."""
         def _walk(node=None):
             if node is None:
                 return
@@ -65,7 +72,7 @@ class BST:
         _walk(self.root)
 
     def post_order(self, operation):
-        """ post_order traversal """
+        """Post_order traversal."""
         def _walk(node=None):
             if node is None:
                 return
@@ -81,7 +88,7 @@ class BST:
         _walk(self.root)
 
     def insert(self, val):
-        """ insert method """
+        """Insert method."""
         if isinstance(val, Node):
             node = val
         else:
