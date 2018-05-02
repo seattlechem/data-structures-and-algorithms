@@ -1,5 +1,4 @@
 """Hash Table Class."""
-from functools import reduce
 from .linked_list import LinkedList as LL
 
 
@@ -9,7 +8,7 @@ class HashTable:
     def __init__(self, max_size=1024):
         """Make an instance of HashTable."""
         if type(max_size) is not int:
-            raise TypeError
+            raise TypeError('Max size must be integer.')
 
         self.max_size = max_size
         self.buckets = [LL() for _ in range(self.max_size)]
@@ -17,7 +16,7 @@ class HashTable:
     def hash_key(self, key):
         """Obtain the hashed key."""
         if type(key) is not str:
-            raise TypeError
+            raise TypeError('key must be string.')
 
         sum = 0
         for char in key:

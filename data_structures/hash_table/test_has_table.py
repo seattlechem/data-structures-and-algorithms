@@ -45,3 +45,15 @@ def test_remove(small_string):
     assert hashe.get(small_string) == 256
     hashe.remove(small_string)
     assert hashe.buckets[hashe.hash_key(small_string)] is None
+
+
+def test_hashtable_size():
+    """Hashtable default size."""
+    hashe = HashTable()
+    assert hashe.max_size == 1024
+
+
+def test_custom_hashtable_size():
+    """Hashtable custom max size."""
+    hashe = HashTable(33)
+    assert hashe.max_size == 33
