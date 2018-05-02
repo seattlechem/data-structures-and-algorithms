@@ -31,6 +31,13 @@ def test_post_order_traversal(small_tree):
     assert ls == [9, 3, 5]
 
 
+def test_breadth_first_traversal(small_tree):
+    """Confirm breadth_first_traversal."""
+    ls = []
+    small_tree.breadth_first_traversal(lambda n: ls.append(n.val))
+    assert ls == [5, 9, 3]
+
+
 def test_ktree_node():
     """Test if K-tree node is made properly."""
     nd = Node(34)
@@ -38,3 +45,9 @@ def test_ktree_node():
     assert nd.children == []
     assert repr(nd) == '<Node Val: 34>'
     assert str(nd) == 'Node Val: 34'
+
+
+def test_ktree(small_tree):
+    """Test K-tree str and repr."""
+    assert repr(small_tree) == '<KTree Root Val: 5>'
+    assert str(small_tree) == 'KTree Root Val: 5'

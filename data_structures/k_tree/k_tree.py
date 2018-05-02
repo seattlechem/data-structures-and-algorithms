@@ -33,7 +33,7 @@ class KTree:
 
     def __str__(self):
         """Ktree class string printout."""
-        return self.root.val
+        return 'KTree Root Val: {}'.format(self.root.val)
 
     def pre_order(self, operation):
         """Ktree pre_order traversal."""
@@ -66,7 +66,7 @@ class KTree:
         queue = Queue()
         queue.enqueue(self.root)
 
-        while len(queue) > 0:
+        while queue._length > 0:
             current = queue.dequeue()
             operation(current)
 
