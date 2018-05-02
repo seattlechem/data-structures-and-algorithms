@@ -1,4 +1,11 @@
-from .node import Node
+class Node:
+    """class called Node """
+    def __init__(self, val, next=None):
+        self.val = val
+        self._next = next
+
+    def __str__(self):
+        return '{val}'.format(val=self.val)
 
 
 class Queue:
@@ -16,11 +23,12 @@ class Queue:
     def enqueue(self, val):
         """ add a value, increase size by 1"""
         node = Node(val)
+
         if self._length == 0:
             self.front = self.back = node
             self._length += 1
             return node
-        self.back.next = node
+        self.back._next = node
         self.back = node
         self._length += 1
         return node
@@ -31,6 +39,6 @@ class Queue:
             raise IndexError('You cannot dequeue() when front is empty')
 
         temp = self.front
-        self.front = temp.next
+        self.front = temp._next
         self._length -= 1
-        return temp
+        return temp.val
