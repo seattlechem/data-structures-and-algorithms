@@ -22,10 +22,7 @@ class Queue:
 
     def enqueue(self, val):
         """ add a value, increase size by 1"""
-        if val.children:
-            node = val
-        else:
-            node = Node(val)
+        node = Node(val)
 
         if self._length == 0:
             self.front = self.back = node
@@ -42,7 +39,6 @@ class Queue:
             raise IndexError('You cannot dequeue() when front is empty')
 
         temp = self.front
-        import pdb; pdb.set_trace()
         self.front = temp._next
         self._length -= 1
-        return temp
+        return temp.val

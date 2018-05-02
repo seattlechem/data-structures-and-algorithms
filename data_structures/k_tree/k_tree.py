@@ -10,6 +10,7 @@ class Node:
         """Create an instance of Node object."""
         self.val = val
         self.children = []
+        self._next = next
 
     def __repr__(self):
         """Node class representation."""
@@ -65,14 +66,11 @@ class KTree:
         """Ktree breadth_first_traversal."""
         queue = Queue()
         queue.enqueue(self.root)
-
         while queue._length > 0:
             current = queue.dequeue()
             operation(current)
-
-            if current.children is not None:
-                for child in current.children:
-                    queue.enqueue(child)
+            for child in current.children:
+                queue.enqueue(child)
 
     def insert(self, val, parent=None):
         """Insert a value at first instance of given parent."""
