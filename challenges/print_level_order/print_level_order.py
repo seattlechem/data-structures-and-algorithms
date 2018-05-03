@@ -21,7 +21,7 @@ def print_level_order(input_kt=None):
     while queue1._length > 0:
         current = queue1.dequeue()
 
-        result += '{} '.format(current.val)
+        result += f'{current.val} '
 
         for child in current.children:
             queue2.enqueue(child)
