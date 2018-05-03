@@ -12,24 +12,22 @@ def print_level_order(input_kt=None):
     if not type(input_kt) is KT:
         raise TypeError('Input must be K-ary Tree.')
 
-    queue = Queue()
-    queue.enqueue(input_kt.root)
+    queue1 = Queue()
+    queue2 = Queue()
     result = ''
 
-    counter = 1
-    import pdb; pdb.set_trace()
-    while queue._length > 0:
-        current = queue.dequeue()
-        counter -= 1
+    queue1.enqueue(input_kt.root)
+
+    while queue1._length > 0:
+        current = queue1.dequeue()
 
         result += '{} '.format(current.val)
-        # print('value:', current.val)
-        if counter == 0:
-            result += '\n'
 
         for child in current.children:
-            # print('value:', child.val)
-            queue.enqueue(child)
-            counter += 1
+            queue2.enqueue(child)
+
+        if queue1._length == 0:
+            queue1, queue2 = queue2, queue1
+            result += '\n '
 
     return result
