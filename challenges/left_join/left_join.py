@@ -16,7 +16,8 @@ def left_join(hash1, hash2):
         value = list(each.values())[0]
 
         if hash2.buckets[hash2.hash_key(key)]:
-            each[key] = value, list(hash2.buckets[hash2.hash_key(key)].head.val.values())[0]
+            each[key] = value, list(hash2.buckets[hash2.hash_key(key)].
+                                    head.val.values())[0]
         else:
             each[key] = value, None
         ht.set(key, each[key])
