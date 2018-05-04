@@ -2,8 +2,13 @@
 from .hash_table import HashTable as HT
 
 
-def left_join(hash1, hash2):
+def left_join(hash1=None, hash2=None):
     """Join two hash tables in a left join way."""
+    if hash1 and hash2 is None:
+        raise ValueError('At least one input must be HashTable')
+    if type(hash1) and type(hash2) is not HT:
+        raise TypeError('Input must be HashTable.')
+
     ls = []
     ht = HT()
 
