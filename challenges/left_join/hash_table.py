@@ -34,8 +34,8 @@ class HashTable:
 
         while current:
             for item in current.val.keys():
-                if item == key:
-                    return current.val[item]
+                item == key
+                return current.val[item]
             current = current._next
 
         return False

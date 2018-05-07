@@ -17,6 +17,7 @@ Data structures and algorithms challenges
 13. find_matches (Challenge 28)
 14. Repeated word (Challenge 31)
 15. Tree interception (Challenge 32)
+16. Left Join (Challenge 33)
 
 ## Data Structures
 1. BST class and methods
