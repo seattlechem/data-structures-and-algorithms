@@ -8,8 +8,9 @@ def selection(ls):
         raise TypeError('Input must be a list type.')
 
     for i in range(0, len(ls)):
-        if not isinstance(ls[i], int):
-            raise TypeError('All elements must be an integer.')
+        if not isinstance(ls[i], (int, str)):
+            raise TypeError('All elements must be either an \
+            integer or string.')
 
     if len(ls) <= 1:
         return ls
