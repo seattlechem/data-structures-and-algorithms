@@ -21,3 +21,10 @@ def test_type_err():
     with pytest.raises(TypeError) as err:
         selection(ls)
         assert err == 'All elements must be either an integer or string.'
+
+
+def test_non_list():
+    """Confirm if error is caught when passing non list parameter."""
+    with pytest.raises(TypeError) as err:
+        selection(123)
+        assert err == 'Input must be a list type.'

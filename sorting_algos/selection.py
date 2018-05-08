@@ -3,7 +3,6 @@
 
 def selection(ls):
     """Create a function which sort list by selection."""
-
     if type(ls) is not list:
         raise TypeError('Input must be a list type.')
 
