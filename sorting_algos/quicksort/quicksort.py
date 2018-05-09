@@ -23,4 +23,17 @@ def partition(arr, first, last):
     done = False
 
     while not done:
-        
+        while leftmark <= rightmark and arr[leftmark] <= pivot_val:
+            leftmark += 1
+
+        while arr[rightmark] >= pivot_val and rightmark >= leftmark:
+            rightmark -= 1
+
+        if rightmark < leftmark:
+            done = True
+        else:
+            arr[leftmark], arr[rightmark] = arr[rightmark], arr[leftmark]
+
+    arr[first], arr[rightmark] = arr[rightmark], arr[first]
+
+    return rightmark
