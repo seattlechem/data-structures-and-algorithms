@@ -3,7 +3,16 @@
 
 def quicksort(arr):
     """."""
-    # import pdb; pdb.set_trace()
+    if type(arr) is not list:
+        raise TypeError('Input must be a list type.')
+
+    for i in range(0, len(arr)):
+        if not isinstance(arr[i], (int, str)):
+            raise TypeError('All elements must be either an \
+            integer or string.')
+
+    if len(arr) <= 1:
+        return arr
     quicksort_helper(arr, 0, len(arr) - 1)
     return arr
 
