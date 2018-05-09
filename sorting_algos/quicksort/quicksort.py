@@ -3,7 +3,9 @@
 
 def quicksort(arr):
     """."""
+    # import pdb; pdb.set_trace()
     quicksort_helper(arr, 0, len(arr) - 1)
+    return arr
 
 
 def quicksort_helper(arr, first, last):
@@ -24,9 +26,11 @@ def partition(arr, first, last):
 
     while not done:
         while leftmark <= rightmark and arr[leftmark] <= pivot_val:
+            # print(f'first while: lm{leftmark}, rm{rightmark}, {arr[leftmark]}, {pivot_val}')
             leftmark += 1
 
         while arr[rightmark] >= pivot_val and rightmark >= leftmark:
+            # print(f'{arr[rightmark]}, {pivot_val}, rm{rightmark}, lm{leftmark}')
             rightmark -= 1
 
         if rightmark < leftmark:
