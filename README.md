@@ -19,6 +19,7 @@ Data structures and algorithms challenges
 15. Tree interception (Challenge 32)
 16. Left Join (Challenge 33)
 17. Merge Sort (Challenge 36)
+18. bt_max_path_sum
 
 ## Data Structures
 1. BST class and methods
