@@ -6,6 +6,18 @@ Finding max path sum in a binary tree.
 :max_path_sum() is a  function to find what is max sum out of all paths.
 
 """
+
+
+class tree_node:
+    """Tree node is defined below."""
+
+    def __init__(self, val):
+        """Constucts bst instance."""
+        self.val = val
+        self.left = None
+        self.right = None
+
+
 # at first define the res (result) as None
 res = None
 
