@@ -1,5 +1,7 @@
 """Find first and last position of elements in sorted arrays."""
 
+"""First and last position in sorted arrays."""
+
 
 def searchRange(nums, target):
     """Find first and last position."""
