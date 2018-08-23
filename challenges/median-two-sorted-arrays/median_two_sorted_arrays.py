@@ -1,7 +1,7 @@
 """Median of two sorted arrays."""
 
 
-def findMedianSortedArrays(self, nums1, nums2):
+def findMedianSortedArrays(nums1, nums2):
     """Find the median of two sorted arrays."""
     a, b = sorted((nums1, nums2), key=len)
     m, n = len(a), len(b)
