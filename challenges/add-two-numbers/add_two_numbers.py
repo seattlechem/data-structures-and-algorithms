@@ -21,12 +21,13 @@ def addTwoNumbers(l1, l2):
 
     while l1 or l2 or carry_over:
         # first add two linked lists including carry_over value
-        sum = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry_over
+        val = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry_over
         # only assign 10-digit number for carry_over
-        carry_over = sum / 10
-        curr.val = ListNode(carry_over % 10)
+        carry_over = val // 10
+        curr.next = ListNode(val % 10)
         curr = curr.next
         l1 = l1.next if l1.next else None
         l2 = l2.next if l2.next else None
 
-    return 
+    # reason why return result.next is because value added after initial 0
+    return result.next
