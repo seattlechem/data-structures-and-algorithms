@@ -31,3 +31,6 @@ def addTwoNumbers(l1, l2):
 
     # reason why return result.next is because value added after initial 0
     return result.next
+
+# Time: O(max(m, n)) where m and n represents the length of l1 and l2.
+# Space: O(max(m, n))
