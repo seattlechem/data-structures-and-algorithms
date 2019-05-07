@@ -1,18 +1,15 @@
-def towers_of_hanoi(num, A='A', B='B', C='C'):
-    counter = 1
-    while num > 0:
-        # import pdb; pdb.set_trace()
-        towers_of_hanoi(num, A, C, B)
-        _move_disk(counter, A, C)
-        counter += 1
-        num -= 1
-        towers_of_hanoi(num-1, B, C, A)
-    return
+class Tower:
 
+    def __init__(self):
+        self.counter = 0
 
-def _move_disk(counter, source, destination):
-    print('Disk {} moved from {} to {}'.format(counter, source, destination))
-
-
-# if __name__ == "__main__":
-#     main()
+    def towers_of_hanoi(self, n, a='A', c='B', b='C'):
+        if n == 1:
+            self.counter += 1
+            print('Disk {} moved from {} to {}'.format(self.counter, a, b))
+        else:
+            self.towers_of_hanoi(n - 1, a, b, c)
+            n = n - 1
+            self.towers_of_hanoi(1, a, c, b)
+            self.towers_of_hanoi(n - 1, b, c, a)
+        ## testing
