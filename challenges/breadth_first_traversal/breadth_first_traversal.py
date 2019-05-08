@@ -2,6 +2,7 @@ from .bst import BST
 
 
 def breadthFirstTraversal(bst):
+    """ breadth first traversal method """
     if not isinstance(bst, BST):
         raise TypeError('It\'s not a BST type.')
 
