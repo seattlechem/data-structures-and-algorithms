@@ -1,18 +1,22 @@
 class Node:
     def __init__(self, val):
+        """ Node constructor """
         self.val = val
         self.right = None
         self.left = None
 
     def __repr__(self):
+        """ Node representation """
         return '<Node Val: {}>'.format(self.val)
 
     def __str__(self):
+        """ Node string printout """
         return self.val
 
 
 class BST:
     def __init__(self, iter=[]):
+        """ BST constructor """
         self.root = None
         if not isinstance(iter, (str, tuple, list)):
             raise TypeError('It\'s not an iterable type.')
@@ -20,13 +24,16 @@ class BST:
             self.insert(item)
 
     def __repr__(self):
+        """ BST representation """
         return '<BST Root: {}>'.format(self.root.val)
 
     def __str__(self):
+        """ BST string printout """
         val = self.root.val
         return str(val)
 
     def in_order(self, operation):
+        """ BST in_order method """
         def _walk(node=None):
             if node is None:
                 return
@@ -42,6 +49,7 @@ class BST:
         _walk(self.root)
 
     def pre_order(self, operation):
+        """ BST pre_order method """
         def _walk(node=None):
             if node is None:
                 return
@@ -57,6 +65,7 @@ class BST:
         _walk(self.root)
 
     def post_order(self, operation):
+        """ BST post_order method """
         def _walk(node=None):
             if node is None:
                 return
@@ -72,6 +81,7 @@ class BST:
         _walk(self.root)
 
     def insert(self, val):
+        """ BST insert method """
         if isinstance(val, Node):
             node = val
         else:
